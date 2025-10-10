@@ -1,0 +1,10 @@
+# Con MariaDB
+
+services:
+  drupal:
+    image: drupal:10
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/var/www/html
+

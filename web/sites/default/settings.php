@@ -246,18 +246,30 @@
  */
 #PostgreSQL
 
+// $databases['default']['default'] = array (
+// 'database' => 'bd_aetn',
+// 'username' => 'mbotelo',
+// 'password' => 'MBotelo.2025',
+// 'prefix' => '',
+// 'host' => '172.16.1.47',
+// 'port' => '5432',
+// 'driver' => 'pgsql',
+// 'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+// 'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+//    );
+
+
 $databases['default']['default'] = array (
 'database' => 'bd_aetn',
-'username' => 'mbotelo',
-'password' => 'MBotelo.2025',
+'username' => 'postgres',
+'password' => '123456',
 'prefix' => '',
-'host' => '172.16.1.47',
+'host' => 'host.docker.internal',
 'port' => '5432',
 'driver' => 'pgsql',
 'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
 'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
    );
-
 
 /**
  * Location of the site configuration files.
@@ -906,15 +918,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'bd_aetn',
-  'username' => 'mbotelo',
-  'password' => 'MBotelo.2025',
-  'prefix' => '',
-  'host' => '172.16.1.47',
-  'port' => '5432',
-  'driver' => 'pgsql',
-  'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
-  'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
-);
+// $databases['default']['default'] = array (
+//   'database' => 'bd_aetn',
+//   'username' => 'mbotelo',
+//   'password' => 'MBotelo.2025',
+//   'prefix' => '',
+//   'host' => '172.16.1.47',
+//   'port' => '5432',
+//   'driver' => 'pgsql',
+//   'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+//   'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+// );
 $settings['config_sync_directory'] = 'sites/default/files/config_hF06woByMCzhUgmr5IgG41COD0h7P6EG_BaNcPqgH4J0JENUbrWr7QxkMIeNpSvlxDmHn_R2tw/sync';

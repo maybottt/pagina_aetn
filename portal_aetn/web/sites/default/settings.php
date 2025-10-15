@@ -246,12 +246,26 @@
  */
 #PostgreSQL
 
+// $databases['default']['default'] = array (
+// 'database' => 'bd_aetn',
+// 'username' => 'mbotelo',
+// 'password' => 'MBotelo.2025',
+// 'prefix' => '',
+// 'host' => '172.16.1.47',
+// 'port' => '5432',
+// 'driver' => 'pgsql',
+// 'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',
+// 'autoload' => 'core/modules/pgsql/src/Driver/Database/pgsql/',
+//    );
+
+
+
 $databases['default']['default'] = array (
 'database' => 'bd_aetn',
-'username' => 'mbotelo',
-'password' => 'MBotelo.2025',
+'username' => 'postgres',
+'password' => '123456',
 'prefix' => '',
-'host' => '172.16.1.47',
+'host' => 'host.docker.internal',
 'port' => '5432',
 'driver' => 'pgsql',
 'namespace' => 'Drupal\\pgsql\\Driver\\Database\\pgsql',

@@ -24,6 +24,7 @@ regions:
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
   content: Content
+  after_content: 'After content'         # para los bloques de los segundos landingpages
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'

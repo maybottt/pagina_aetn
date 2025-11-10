@@ -1,8 +1,0 @@
-uuid: e1cb5d18-337f-41c1-a205-4d3c7115559e
-langcode: es
-status: true
-dependencies: {  }
-id: bloque_bolivia_a_tu_servicio
-label: 'Bloque Bolivia a tu servicio'
-revision: false
-description: 'Bloque para mostrar información de Bolivia a tu servicio'

@@ -1480,3 +1480,10 @@ h5.staff-name {
 .input-group-text {
   cursor: pointer;
 }
+
+/* para los bloques de los segundos landingpages */
+.after-content.full-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

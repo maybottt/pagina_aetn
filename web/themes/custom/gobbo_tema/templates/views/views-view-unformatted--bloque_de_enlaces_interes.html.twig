@@ -42,12 +42,25 @@
 							<div class='card-footer bg-transparent' style='border: none;'>
 								<div class='row justify-content-center'>
 									<div class='col-auto px-0'>
-										<a style="display: flex;" href="{{row.content['#row']._entity.field_enlace_enlaceinteres.uri}}" target="_blank">
-											<p class='card-text px-0'>
-												{{row.content['#row']._entity.field_enlace_enlaceinteres.title}}
-											</p>
-											<i class='px-2 mb-2 bi bi-box-arrow-up-right'></i>
-										</a>
+										{% set enlace = row.content['#row']._entity.field_enlace_enlaceinteres.uri %}
+{% set titulo = row.content['#row']._entity.field_enlace_enlaceinteres.title %}
+
+{% if enlace starts with 'internal:/' %}
+  {% set enlace = base_path ~ enlace|replace({'internal:/': ''}) %}
+  {% set target = '_self' %}
+{% else %}
+  {% set target = '_blank' %}
+{% endif %}
+
+<a style="display: flex;" href="{{ enlace }}" target="{{ target }}">
+  <p class='card-text px-0'>
+    {{ titulo }}
+  </p>
+  {% if target == '_blank' %}
+    <i class='px-2 mb-2 bi bi-box-arrow-up-right'></i>
+  {% endif %}
+</a>
+
 									</div>
 								</div>
 							</div>

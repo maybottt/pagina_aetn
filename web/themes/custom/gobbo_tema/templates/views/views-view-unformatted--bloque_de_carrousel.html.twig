@@ -54,16 +54,32 @@
 									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
 								</div>
 								<div class="text-end d-none d-sm-block">
-									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-dark" style="background-color: {{row['field_color_carrousel']}};">
-										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
-										<i class='bi bi-arrow-right'></i>
-									</a>
+									{% if row['field_enlace_carrousel']['uri'] %}
+  {% set enlace = row['field_enlace_carrousel']['uri'] %}
+  {% if enlace starts with 'internal:/' %}
+    {% set enlace = base_path ~ enlace|replace({'internal:/': ''}) %}
+  {% endif %}
+  {% set titulo = row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] : 'Más información' %}
+  <a href="{{ enlace }}" class="btn btn-dark" style="background-color: {{ row['field_color_carrousel'] }};">
+    {{ titulo }}
+    <i class="bi bi-arrow-right"></i>
+  </a>
+{% endif %}
+
 								</div>
 								<div class="text-eendd-block d-sm-none">
-									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-sm btn-dark" style="background-color: {{row['field_color_carrousel']}};">
-										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
-										<i class='bi bi-arrow-right'></i>
-									</a>
+									{% if row['field_enlace_carrousel']['uri'] %}
+  {% set enlace = row['field_enlace_carrousel']['uri'] %}
+  {% if enlace starts with 'internal:/' %}
+    {% set enlace = base_path ~ enlace|replace({'internal:/': ''}) %}
+  {% endif %}
+  {% set titulo = row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] : 'Más información' %}
+  <a href="{{ enlace }}" class="btn btn-dark" style="background-color: {{ row['field_color_carrousel'] }};">
+    {{ titulo }}
+    <i class="bi bi-arrow-right"></i>
+  </a>
+{% endif %}
+
 								</div>
 							</div>
 						</div>
@@ -82,16 +98,32 @@
 									<h6 style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;" class="text-white">{{row['field_descripcion_carrousel']}}</h6>
 								</div>
 								<div class="text-end d-none d-sm-block">
-									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-dark" style="background-color: {{row['field_color_carrousel']}};">
-										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
-										<i class='bi bi-arrow-right'></i>
+									{% if row['field_enlace_carrousel']['uri'] %}
+									{% set enlace = row['field_enlace_carrousel']['uri'] %}
+									{% if enlace starts with 'internal:/' %}
+										{% set enlace = base_path ~ enlace|replace({'internal:/': ''}) %}
+									{% endif %}
+									{% set titulo = row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] : 'Más información' %}
+									<a href="{{ enlace }}" class="btn btn-dark" style="background-color: {{ row['field_color_carrousel'] }};">
+										{{ titulo }}
+										<i class="bi bi-arrow-right"></i>
 									</a>
+									{% endif %}
+
 								</div>
 								<div class="text-eendd-block d-sm-none">
-									<a href="{{row['field_enlace_carrousel']['uri']}}" class="btn btn-sm btn-dark" style="background-color: {{row['field_color_carrousel']}};">
-										{{ row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] :  'Más información' }}
-										<i class='bi bi-arrow-right'></i>
-									</a>
+									{% if row['field_enlace_carrousel']['uri'] %}
+  {% set enlace = row['field_enlace_carrousel']['uri'] %}
+  {% if enlace starts with 'internal:/' %}
+    {% set enlace = base_path ~ enlace|replace({'internal:/': ''}) %}
+  {% endif %}
+  {% set titulo = row['field_enlace_carrousel']['title'] ? row['field_enlace_carrousel']['title'] : 'Más información' %}
+  <a href="{{ enlace }}" class="btn btn-dark" style="background-color: {{ row['field_color_carrousel'] }};">
+    {{ titulo }}
+    <i class="bi bi-arrow-right"></i>
+  </a>
+{% endif %}
+
 								</div>
 							</div>
 						</div>

@@ -44,7 +44,17 @@
     </div>
   {% endblock %}
 </div> #}
-<div style="background-image:url(/{{ directory }}/imagenes/alpha-web-cinta.png); background-repeat:repeat-x; background-size: contain; height: 48px; "></div>
+
+{# <div style="background-image:url(/{{ directory }}/imagenes/alpha-web-cinta.png); background-repeat:repeat-x; background-size: contain; height: 48px; "></div> #}
+<div style="height: 16px; width: 100%;
+            background: linear-gradient(to right,
+              #D52B1E 33.33%,
+              #F9E300 33.33% 66.66%,
+              #007934 66.66%);
+     ">
+</div>
+
+
 <hr class="hr"></hr><div class="text-center">
 {% if content['#block_content'].field_reglas_credito.value[0]['title'] %}
 

@@ -1487,3 +1487,11 @@ h5.staff-name {
     max-width: 1200px; 
     margin: 0 auto;
 }
+
+/* Estilo para titulo de tablas agrupadas */
+.views-group-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  color: #1f2937;
+}

@@ -43,6 +43,12 @@
   ]
 %}
 
+{% if title %}
+  <h2 class="views-group-subtitle">
+    {{ title }}
+  </h3>
+{% endif %}
+
 <div class="table-responsive col">
 <table{{ attributes.addClass(classes) }}>
   {% if caption_needed %}
